@@ -16,7 +16,6 @@ MacStat is a currently open-source utility application that displays and conveys
 
 
 
-
 ## Feature set ##
 ___
 ✔ Medium widget
