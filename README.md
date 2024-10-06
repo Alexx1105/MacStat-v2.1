@@ -13,7 +13,6 @@ MacStat is a currently open-source utility application that displays and conveys
 ![updatedUI](https://github.com/user-attachments/assets/ce1f0404-1519-4677-a490-6f52a4af920a)
 ![IMG_0098](https://github.com/user-attachments/assets/21327cd0-bced-4523-858d-117229ccc3a6)
 
-
 ## Feature set ##
 ___
 ✔ Medium widget
