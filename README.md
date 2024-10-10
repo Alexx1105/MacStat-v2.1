@@ -37,7 +37,8 @@ ___
 
 ## Installation & feedback ##
 
-Download the zip via the version tag under the "__Release__" tag. Please feel free to send feature requests, bug issues, or any general feedback for future versions!
+👇 Download the zip via the version tag under the "__Release__" tag. Please feel free to send feature requests, bug issues, or any general feedback for future versions!
+![CleanShot 2024-10-09 at 22 12 30@2x](https://github.com/user-attachments/assets/ed4fb9fc-18af-4b31-b666-132a5be07699)
 
 
 
