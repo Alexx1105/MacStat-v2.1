@@ -1,4 +1,4 @@
-![64](https://github.com/user-attachments/assets/c05acf8b-7305-4eca-8179-df93da4d6b4b)  
+
 # MacStat-v2 # 
 
 
@@ -10,7 +10,7 @@ MacStat is a currently open-source utility application that displays and conveys
 
  MacStat gives you multiple ways to look at your memory usage, or CPU load at a glance
 
-![(https://github.com/user-attachments/assets/ce1f0404-1519-4677-a490-6f52a4af920a)
+![IMG_0099](https://github.com/user-attachments/assets/6d19f961-b833-4f93-9c42-f2b7be218cde)
 ![IMG_0098](https://github.com/user-attachments/assets/21327cd0-bced-4523-858d-117229ccc3a6)
 
 
@@ -37,8 +37,7 @@ ___
 
 ## Installation & feedback ##
 
-MacStat will be available and free to use for a limited time in order to guage interest and recieve feedback on improvements aswell as feature requests, you can download our first release to try out now as a .pkg by going to the "Releases" tab on the right, we plan to also make the app available on the app store soon!
-![CleanShot 2024-10-05 at 15 29 17@2x](https://github.com/user-attachments/assets/9944bca1-3feb-432a-93f2-e431b04a6004)
+Download the zip via the version tag under the "__Release__" tag. Please feel free to send feature requests, bug issues, or any general feedback for future versions!
 
 
 
