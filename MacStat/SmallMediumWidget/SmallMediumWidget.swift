@@ -62,6 +62,7 @@ struct smallMediumWidgetEntryView : View {
             Text(displayModelAndChip)
                 .font(.system(size: 13, weight: .semibold, design: .default))
                 .offset(x: -54, y: -57)
+                .foregroundStyle(Color.white)
             VStack(alignment: .leading) {
                 
                 Divider()
@@ -106,7 +107,7 @@ struct smallMediumWidgetEntryView : View {
                         Text(String(format: "%.2f", controller.memoryUsage))
                             .offset(x: 11, y:50)
                             .font(.system(size: 36, weight: .semibold ,design: .default))
-                         
+                            .foregroundStyle(Color.white)
                         
                         Text("GB")
                             .font(.system(size: 18, weight: .regular ,design: .default))
@@ -145,7 +146,7 @@ struct smallMediumWidgetEntryView : View {
                                 .offset(x: -82)
                                 .foregroundStyle(Color.redTab)
                             
-                            Text("Active CPUs")
+                            Text("CPU load")
                                 .offset(x: -33, y:0)
                                 .font(.system(size: 13, weight: .regular ,design: .default))
                                 .foregroundStyle(Color.redTab)
@@ -154,6 +155,7 @@ struct smallMediumWidgetEntryView : View {
                             Text("\(controller.cpuUsage)")
                                 .position(x: 5, y:60)
                                 .font(.system(size: 36, weight: .semibold ,design: .default))
+                                .foregroundStyle(Color.white)
                             
                             Text("%")
                                 .font(.system(size: 36, weight: .regular ,design: .default))

@@ -17,67 +17,106 @@ struct ContentView: View {
     let totalMemory = SystemInfo.getTotalMemory()
     
     var body: some View {
-        VStack {
-            Text("MacStat")
-                .font(.system(size: 17.7, weight: .semibold, design: .default))
-                .foregroundColor(Color.primary.opacity(0.7))
-                .frame(maxWidth: .infinity, alignment: .leading)
+        VStack(alignment: .leading) {
+         
+            HStack {
+                Button( action: {                    //In 3.0, this will be modded later on to trigger a popover window prompt with a quit app option, version option, and change icon option
+                    
+                    closeWindow()
+                }) {
+                    Image("MacStat - classic")
+                        .resizable()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .frame(width: 34, height: 34)
+                        .padding(.leading, -2)
+                    
+                    
+                }
+                .buttonStyle(PlainButtonStyle())
+                
+                Text("⌘ Q")
+                    .font(.system(size: 17, weight: .semibold, design: .default))
+                    .opacity(0.2)
+                    .padding(.top, 1)
+                
+              
+            }
             
-            Divider()
-                .opacity(2.0)
+                Divider()
+                    .opacity(2.0)
+                    .padding(.bottom, 2)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal, -15)
+                   
             
             Text(systemModelAndChip)
                 .padding(.top, 3)
                 .font(.system(size: 17.7, weight: .semibold, design: .default))
-                .foregroundColor(Color.primary.opacity(0.7))
+                .foregroundColor(Color.primary.opacity(0.5))
                 .frame(maxWidth: .infinity, alignment: .leading)
             
             Spacer()
             
             HStack {
-                Image(systemName: "gauge.with.dots.needle.67percent")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .opacity(0.7)
-                    .frame(width: 60)
-                
-                Text("CPU Usage :")
-                    .font(.system(size: 15.17, weight: .regular, design: .default ))
-                    .opacity(0.8)
+                Rectangle()
+                    .frame(width: 32, height: 32)
+                    .cornerRadius(5)
+                    .opacity(0.1)
+                 
+                    .overlay {
+                        Image(systemName: "gauge.with.dots.needle.67percent")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 21, height: 21)
+                            .opacity(0.8)
+                            .frame(width: 60)
+                    }
+                Text("CPU Usage ")
+                    .font(.system(size: 15.17, weight: .semibold, design: .default ))
+                    .opacity(0.5)
+                    .padding(.horizontal)
                 
                 Spacer()
                 
                 Text("\(statsController.cpuUsage)")
                     .font(.system(size: 17, weight: .semibold, design: .default))
+                    .opacity(0.8)
                 Text("%")
-                    .font(.system(size: 15.17, weight: .light, design: .default))
-                    .opacity(0.7)
+                    .font(.system(size: 15.17, weight: .regular, design: .default))
+                    .opacity(0.5)
             }
             
             Divider()
                 .opacity(2.0)
-                .padding(.vertical, 4)
+                .padding(.vertical, 8)
             
             HStack {
-                Image(systemName: "cpu.fill")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 25, height: 25)
-                    .opacity(0.7)
-                    .frame(width: 60)
+                Rectangle()
+                    .frame(width: 32, height: 32)
+                    .cornerRadius(5)
+                    .opacity(0.1)
                 
-                Text("Memory Usage :")
-                    .font(.system(size: 15.17, weight: .regular, design: .default))
-                    .opacity(0.7)
+                    .overlay {
+                        Image(systemName: "cpu.fill")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 21, height: 21)
+                            .opacity(0.8)
+                            .frame(width: 60)
+                    }
                 
+                Text("Memory Usage ")
+                    .font(.system(size: 15.17, weight: .semibold, design: .default))
+                    .opacity(0.5)
+                    .padding(.horizontal)
                 Spacer()
                 
                 Text(String(format: "%.2f", statsController.memoryUsage))
                     .font(.system(size: 17, weight: .semibold, design: .default))
+                    .opacity(0.8)
                 Text("/ \(totalMemory) GB")
-                    .font(.system(size: 15.17, weight: .light, design: .default))
-                    .opacity(0.7)
+                    .font(.system(size: 15.17, weight: .regular, design: .default))
+                    .opacity(0.5)
             }
                         
             TemperatureChartView()
@@ -85,6 +124,7 @@ struct ContentView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea(edges: .top)
     }
 }
 
